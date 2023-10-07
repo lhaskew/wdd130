@@ -1,0 +1,26 @@
+main{
+    width: 1000px;
+    background-color: pink;
+}
+
+.maincontent{
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    inline-size: 450px;
+}
+
+.list{
+    color: black;
+    text-align: left;
+}
+
+h1:hover{
+    color: black;
+}
+
+h1{
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
