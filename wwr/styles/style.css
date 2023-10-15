@@ -1,3 +1,5 @@
+
+
 #background {
     height: 725px;
 }
@@ -29,6 +31,7 @@ main section {
     text-align: center;
 }
 body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: #B1B6A6;
 }
 
@@ -41,16 +44,14 @@ nav a:hover {
     color:#696773;
 }
 
-.book {
+.book, .join {
     color: black;
     background-color: #B1B6A6;
     text-decoration: none;
-}
-
-.join {
-    color: black;
-    background-color: #819595;
-    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 
 .book:hover {
@@ -120,3 +121,9 @@ footer p {
 footer p a:hover {
     text-decoration: underline;
 }    
+.card-img {
+    border: 10px solid #d9c2a3;
+}
+main section img {
+    box-sizing: border-box;
+}
