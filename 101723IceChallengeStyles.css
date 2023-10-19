@@ -2,3 +2,9 @@
     display: grid;
     grid-template-columns: auto auto;
 }
+img {
+    width: 100%;
+}
+.grid-item2 {
+    background-color: #b9b8b9;
+}
