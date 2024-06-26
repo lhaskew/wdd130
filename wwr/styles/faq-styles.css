@@ -1,0 +1,104 @@
+:root {
+    --main-bg-color: #e8e8e8;
+    --header-bg-color: rgba(0, 0, 0, 0.7);
+    --footer-bg-color: #6f7364;
+    --primary-color: #d9c2a3;
+    --secondary-color: #6f7364;
+    --text-color: white;
+    --text-color-dark: #6f7364;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--main-bg-color);
+    position: relative;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 150px auto;
+    background: var(--header-bg-color);
+    padding: 10px;
+}
+
+#logo_link {
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text-color);
+    padding: 10px 20px;
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p, .social a img {
+    margin: 0 10px;
+    color: var(--text-color);
+}
+
+.faq-item {
+    padding: 20px;
+}
+
+h2 {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.answer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+html, body {
+    height: 100%;
+}
+
+main {
+    min-height: 100%;
+}
+
+.header-image {
+    position: relative;
+    text-align: center; /* Center the image */
+    margin-top: 20px;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.header-image img {
+    width: 100vw; /* Make the image width 100% of viewport width */
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
