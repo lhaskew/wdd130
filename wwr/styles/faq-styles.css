@@ -89,13 +89,13 @@ main {
 
 .header-image {
     position: relative;
-    text-align: center; /* Center the image */
+    text-align: center;
     margin-top: 20px;
-    margin-bottom: 20px; /* Adjust the margin as needed */
+    margin-bottom: 20px;
 }
 
 .header-image img {
-    width: 100vw; /* Make the image width 100% of viewport width */
+    width: 100vw;
     height: 300px;
     position: absolute;
     left: 50%;
