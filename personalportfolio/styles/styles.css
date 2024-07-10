@@ -19,16 +19,17 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--paragraph-font);
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: var(--secondary-color);
+    color: #000;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--headline-color-on-color);
     padding: 10px 0;
     display: flex;
     align-items: center;
@@ -64,14 +65,14 @@ header nav ul li {
 }
 
 header nav ul a {
-    color: #fff;
+    color: var(--nav-link-color);
     text-decoration: none;
     padding: 10px 20px;
     display: inline-block;
 }
 
 header nav ul a:hover {
-    background-color: #575757;
+    background-color: var(--nav-hover-background-color);
 }
 
 header .buttons {
@@ -82,23 +83,26 @@ header .buttons {
 }
 
 header .buttons button {
-    background-color: #575757;
-    color: #fff;
+    background-color: var(--nav-background-color);
+    color: black;
     border: none;
     padding: 15px 30px;
     margin: 0 5px;
     cursor: pointer;
     flex-grow: 1;
+    font-family: var(--heading-font);
 }
 
 header .buttons button:hover {
-    background-color: #777;
+    background-color: var(--primary-color);
 }
 
 header h1 {
     width: 100%;
     text-align: center;
     margin-top: 10px;
+    color: var(--headline-color-on-color);
+    font-family: var(--heading-font);
 }
 
 main {
@@ -111,13 +115,18 @@ main .intro {
     gap: 20px;
     align-items: start;
     margin-bottom: 20px;
+    background-color: var(--nav-background-color);
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 main .intro .text {
-    background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #000;
+    font-family: var(--paragraph-font);
 }
 
 main .intro img {
@@ -128,15 +137,18 @@ main .intro img {
 }
 
 main section#about-me {
-    background-color: #fff;
+    background-color: var(--paragraph-background-color);
     padding: 20px;
     margin: 20px 0;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: var(--paragraph-color-on-color);
+    font-family: var(--paragraph-font);
 }
 
 main section#about-me h2 {
     margin-top: 0;
+    font-family: var(--heading-font);
 }
 
 main section#about-me img {
@@ -148,8 +160,8 @@ main section#about-me img {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--headline-color-on-color);
     text-align: center;
     padding: 10px 0;
     position: relative;
@@ -158,7 +170,7 @@ footer {
 }
 
 footer a {
-    color: #fff;
+    color: var(--headline-color-on-color);
     text-decoration: none;
 }
 
@@ -175,6 +187,7 @@ main .button-group {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     margin-top: 20px;
+    color: var(--accent1-color);
 }
 
 main .button-group .button {
@@ -182,7 +195,7 @@ main .button-group .button {
     background-size: cover;
     padding: 50px 20px;
     text-align: center;
-    color: #c1c1c1;
+    color: var(--primary-color);
     font-size: 24px;
     font-weight: bold;
     border-radius: 10px;
@@ -191,25 +204,30 @@ main .button-group .button {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--accent1-color);
 }
 
 main .button-group .button:hover {
     background-color: rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
 #contact-me {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: #fff;
+    background-color: var(--secondary-color);
     padding: 20px;
     margin: 20px 0;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-color);
 }
 
 #contact-me .motto {
     width: 45%;
+    color: var(--headline-color-on-color);
+    font-family: var(--heading-font);
 }
 
 #contact-me .contact-form {
@@ -221,6 +239,8 @@ main .button-group .button:hover {
 
 #contact-me h2 {
     text-align: center;
+    color: var(--headline-color-on-color);
+    font-family: var(--heading-font);
 }
 
 .message-box textarea {
@@ -236,8 +256,8 @@ main .button-group .button:hover {
     margin-top: 10px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #697985;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--headline-color-on-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
