@@ -11,34 +11,40 @@
         <div class="logo">
             <img src="photos/logo1.png" alt="Logo">
         </div>
-        <nav>
-            <ul>
-                <a href="index.html">Home</a></li>
-                <a href="page2.html">Projects</a></li>
-                <a href="page3.html">Hobbies & Goals</a></li>
-            </ul>
-        </nav>
         <div class="buttons">
-            <button>Button 1</button>
-            <button>Button 2</button>
-            <button>Button 3</button>
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='page2.html'">Projects</button>
+            <button onclick="location.href='page3.html'">Hobbies & Goals</button>
         </div>
-        <h1>Hello there!</h1>
     </header>
     <main>
-        <section id="about-me">
-            <h2>About Me</h2>
-            <p>My name is Lucy Haskew, a passionate Computer Science student at Brigham Young University – Idaho. With my background in software development, I seek to gain more experience within the realms of the software industry. Since 2022, I have been degree-seeking, but my love for programming didn’t start there. In the summer of 2018, I started learning basic JavaScript and wrote my own video game. Over the years, I’ve had the privilege of working on diverse projects that range from developing interactive user interfaces to automating data systems within my current place of employment.</p>
-            <p>My estimated graduation date is Spring 2025. I will then be attaining a Bachelor of Science in Computer Science. I yearn to continue on this progressive path of learning and professional growth. Following my graduation, I hope to further my career in workplaces that provide me opportunities to learn and grow in my personal and professional development. My career path is focused on drive, intuition, progression, and success. I understand that success does not come easily, and as such, I promote a positive attitude towards individual growth.</p>
+        <div class="intro">
+            <div class="text">
+                <h2>About Me</h2>
+                <p>My name is Lucy Haskew, a passionate Computer Science student at Brigham Young University – Idaho. With my background in software development, I seek to gain more experience within the realms of the software industry. Since 2022, I have been degree-seeking, but my love for programming didn’t start there. In the summer of 2018, I started learning basic JavaScript and wrote my own video game. Over the years, I’ve had the privilege of working on diverse projects that range from developing interactive user interfaces to automating data systems within my current place of employment.</p>
+                <p>My estimated graduation date is Spring 2025. I will then be attaining a Bachelor of Science in Computer Science. I yearn to continue on this progressive path of learning and professional growth. Following my graduation, I hope to further my career in workplaces that provide me opportunities to learn and grow in my personal and professional development. My career path is focused on drive, intuition, progression, and success. I understand that success does not come easily, and as such, I promote a positive attitude towards individual growth.</p>
+            </div>
             <img src="photos/IMG_9437JPG.jpg" alt="Image 1">
-            <img src="photos/IMG_8738JPG.jpg" alt="Image 2">
+        </div>
+
+        <section id="contact-me">
+            <div class="motto">
+                <h2>Motto</h2>
+                <p>Insert your motto here.</p>
+            </div>
+            <div class="contact-form">
+                <div class="message-box">
+                    <textarea id="message" rows="4" placeholder="Type your message here..."></textarea>
+                </div>
+                <button onclick="sendMessage()">Send</button>
+            </div>
         </section>
 
-        <section id="page-tabs">
-            <h3>Projects</h3>
-            <h4>Experience</h4>
-            <h5>Contact</h5>
-        </section>
+        <div class="button-group">
+            <div class="button"><span>Projects</span></div>
+            <div class="button"><span>Experience</span></div>
+            <div class="button"><span>Contact</span></div>
+        </div>
     </main>
     <footer>
         <p>Contact me at: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
@@ -48,5 +54,12 @@
             <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
         </div>
     </footer>
+
+    <script>
+        function sendMessage() {
+            var message = document.getElementById('message').value;
+            alert('Message sent: ' + message);
+        }
+    </script>
 </body>
 </html>
