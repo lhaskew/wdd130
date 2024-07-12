@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucy Haskew - Home</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="photos/logo1.png" alt="Logo">
         </div>
-        <div class="buttons">
-            <button onclick="location.href='index.html'">Home</button>
-            <button onclick="location.href='page2.html'">Projects</button>
-            <button onclick="location.href='page3.html'">Hobbies & Goals</button>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="page2.html">Projects</a>
+            <a href="page3.html">Hobbies & Goals</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
     </header>
     <main>
@@ -48,15 +52,25 @@
         </div>
     </main>
     <footer>
-        <p>Contact me at: <a href="lucy.haskew@outlook.com">lucy.haskew@outlook.com</a></p>
+        <p>Contact me at: <a href="mailto:lucy.haskew@outlook.com">lucy.haskew@outlook.com</a></p>
         <p><a href="site-plan.html">Site Plan</a></p>
         <div class="social-media">
             <a href="https://twitter.com/yourprofile">Twitter</a>
             <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
         </div>
+        <p>&copy; 2024 Lucy Haskew. All rights reserved.</p>
     </footer>
 
     <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
         function sendMessage() {
             var message = document.getElementById('message').value;
             alert('Message sent: ' + message);
