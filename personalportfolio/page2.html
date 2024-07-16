@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucy Haskew - Projects</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -22,22 +22,64 @@
         </div>
     </header>
     <main>
+        <h1>Projects</h1>
         <section id="projects">
-            <h2>Projects</h2>
-            <p>Here are some of the projects I've worked on:</p>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of Project 1</p>
+        </section>
+        <section id="contact-me">
+            <div class="contact-photo">
+                <img src="photos/IMG_5369JPG.jpg" alt="Contact Photo">
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of Project 2</p>
-            </div>
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Description of Project 3</p>
+            <div class="contact-form">
+                <h2>Contact Me</h2>
+                <form action="#" method="post">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                    <label for="message-header">Message Header:</label>
+                    <input type="text" id="message-header" name="message-header" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
             </div>
         </section>
+
+        <section id="links">
+            <h2>Links</h2>
+            <div class="link-buttons">
+                <button><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></button>
+                <button><a href="https://github.com/yourusername" target="_blank">GitHub</a></button>
+                <button><a href="path-to-your-resume.pdf" target="_blank">Resume</a></button>
+            </div>
+        </section>
+
+        <section id="project-carousel">
+            <h2>My Projects</h2>
+            <div class="project-carousel">
+                <div class="project-slide">
+                    <a class="prev" onclick="prevSlide()">&#10094;</a>
+                    <img src="photos/IMG_0269JPG.jpg" alt="Project 1">
+                    <a class="next" onclick="nextSlide()">&#10095;</a>
+                    <div class="caption">Caption for Project 1</div>
+                </div>
+                <div class="project-slide">
+                    <a class="prev" onclick="prevSlide()">&#10094;</a>
+                    <img src="photos/IMG_394820.jpg" alt="Project 2">
+                    <a class="next" onclick="nextSlide()">&#10095;</a>
+                    <div class="caption">Caption for Project 2</div>
+                </div>
+                <div class="project-slide">
+                    <a class="prev" onclick="prevSlide()">&#10094;</a>
+                    <img src="photos/IMG_52419.jpg" alt="Project 3">
+                    <a class="next" onclick="nextSlide()">&#10095;</a>
+                    <div class="caption">Caption for Project 3</div>
+                </div>
+            </div>
+        </section>
+        
     </main>
     <footer>
         <p>Contact me at: <a href="mailto:lucy.haskew@outlook.com">lucy.haskew@outlook.com</a></p>
@@ -58,6 +100,33 @@
                 x.className = "topnav";
             }
         }
+
+        var slideIndex = 1;
+
+        function showSlide(n) {
+            var slides = document.getElementsByClassName("project-slide");
+            var captions = document.getElementsByClassName("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (var i = 0; i < captions.length; i++) {
+                captions[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+            captions[slideIndex - 1].style.display = "block";
+        }
+
+        function prevSlide() {
+            showSlide(slideIndex -= 1);
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex += 1);
+        }
+
+        showSlide(slideIndex);
     </script>
 </body>
 </html>
