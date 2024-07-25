@@ -406,13 +406,17 @@ main .button-group .button:hover {
 #main-photo .text-content {
   width: 50%;
   padding: 20px;
-  background-color: var(--paragraph-background-color);
-  color: var(--paragraph-color-on-color);
+  background-color: var(--accent1-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #000;
+  font-family: var(--paragraph-font);
 }
 
 #main-photo .main-image {
   width: 50%;
   padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #main-photo .main-image img {
@@ -420,6 +424,7 @@ main .button-group .button:hover {
   height: auto;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--nav-background-color);
 }
 
 #additional-photos {
@@ -433,4 +438,10 @@ main .button-group .button:hover {
   height: auto;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#main-photo h1 {
+  text-align: center;
+  color: black;
+  font-family: var(--heading-font);
 }
